@@ -1,4 +1,4 @@
-@import './styles/themes.css';
+@import '../styles/themes.css';
 
 .home {
   max-width: 1000px;
