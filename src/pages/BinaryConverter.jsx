@@ -125,13 +125,15 @@ function BinaryConverter() {
 
           <div className="full-conversions">
             <div className="conversion-card">
-              <h3>🔢 Formats complets</h3>
+              <h3><span className="card-header-icon format-icon"></span>Formats complets</h3>
               
               <div className="conversion-item">
                 <span className="conversion-label">Décimal (original):</span>
                 <div className="conversion-value">
                   <code>{ip}</code>
-                  <button onClick={() => copyToClipboard(ip)} className="copy-btn">📋</button>
+                  <button onClick={() => copyToClipboard(ip)} className="copy-btn">
+                    <span className="copy-icon"></span>
+                  </button>
                 </div>
               </div>
 
@@ -139,7 +141,9 @@ function BinaryConverter() {
                 <span className="conversion-label">Binaire (avec points):</span>
                 <div className="conversion-value">
                   <code>{results.fullBinary}</code>
-                  <button onClick={() => copyToClipboard(results.fullBinary)} className="copy-btn">📋</button>
+                  <button onClick={() => copyToClipboard(results.fullBinary)} className="copy-btn">
+                    <span className="copy-icon"></span>
+                  </button>
                 </div>
               </div>
 
@@ -147,7 +151,9 @@ function BinaryConverter() {
                 <span className="conversion-label">Binaire (32 bits):</span>
                 <div className="conversion-value">
                   <code>{results.fullBinaryNoDots}</code>
-                  <button onClick={() => copyToClipboard(results.fullBinaryNoDots)} className="copy-btn">📋</button>
+                  <button onClick={() => copyToClipboard(results.fullBinaryNoDots)} className="copy-btn">
+                    <span className="copy-icon"></span>
+                  </button>
                 </div>
               </div>
 
@@ -155,7 +161,9 @@ function BinaryConverter() {
                 <span className="conversion-label">Hexadécimal (avec :):</span>
                 <div className="conversion-value">
                   <code>{results.fullHex}</code>
-                  <button onClick={() => copyToClipboard(results.fullHex)} className="copy-btn">📋</button>
+                  <button onClick={() => copyToClipboard(results.fullHex)} className="copy-btn">
+                    <span className="copy-icon"></span>
+                  </button>
                 </div>
               </div>
 
@@ -163,7 +171,9 @@ function BinaryConverter() {
                 <span className="conversion-label">Hexadécimal (compact):</span>
                 <div className="conversion-value">
                   <code>0x{results.fullHexNoDots}</code>
-                  <button onClick={() => copyToClipboard(`0x${results.fullHexNoDots}`)} className="copy-btn">📋</button>
+                  <button onClick={() => copyToClipboard(`0x${results.fullHexNoDots}`)} className="copy-btn">
+                    <span className="copy-icon"></span>
+                  </button>
                 </div>
               </div>
 
@@ -171,13 +181,15 @@ function BinaryConverter() {
                 <span className="conversion-label">Valeur décimale 32-bit:</span>
                 <div className="conversion-value">
                   <code>{results.decimalValue.toLocaleString()}</code>
-                  <button onClick={() => copyToClipboard(results.decimalValue.toString())} className="copy-btn">📋</button>
+                  <button onClick={() => copyToClipboard(results.decimalValue.toString())} className="copy-btn">
+                    <span className="copy-icon"></span>
+                  </button>
                 </div>
               </div>
             </div>
 
             <div className="conversion-card">
-              <h3>📚 Explications</h3>
+              <h3><span className="card-header-icon info-icon"></span>Explications</h3>
               <div className="explanation">
                 <p><strong>Binaire:</strong> Chaque octet (0-255) est représenté sur 8 bits</p>
                 <p><strong>Hexadécimal:</strong> Chaque octet est représenté sur 2 chiffres hex (00-FF)</p>
@@ -187,7 +199,7 @@ function BinaryConverter() {
           </div>
 
           <div className="binary-breakdown">
-            <h3>🔍 Décomposition binaire</h3>
+            <h3><span className="card-header-icon breakdown-icon"></span>Décomposition binaire</h3>
             <div className="binary-grid">
               {results.parts.map((part, octetIndex) => (
                 <div key={octetIndex} className="binary-octet">

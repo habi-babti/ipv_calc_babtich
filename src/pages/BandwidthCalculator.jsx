@@ -331,7 +331,7 @@ function BandwidthCalculator() {
             <>
               <div className="result-grid">
                 <div className="result-card">
-                  <h3>📊 Résumé</h3>
+                  <h3><span className="card-header-icon summary-icon"></span>Résumé</h3>
                   <div className="result-item">
                     <span className="label">Total utilisateurs:</span>
                     <span className="value">{results.totalUsers}</span>
@@ -352,7 +352,7 @@ function BandwidthCalculator() {
               </div>
 
               <div className="services-breakdown">
-                <h3>📋 Détail par service</h3>
+                <h3><span className="card-header-icon list-icon"></span>Détail par service</h3>
                 <div className="services-table">
                   <div className="table-header">
                     <span>Service</span>
@@ -378,7 +378,7 @@ function BandwidthCalculator() {
           ) : (
             <div className="result-grid">
               <div className="result-card">
-                <h3>📁 Transfert de fichier</h3>
+                <h3><span className="card-header-icon file-icon"></span>Transfert de fichier</h3>
                 <div className="result-item">
                   <span className="label">Taille du fichier:</span>
                   <span className="value">{formatFileSize(results.fileSize)}</span>
@@ -404,28 +404,28 @@ function BandwidthCalculator() {
           )}
 
           <div className="bandwidth-recommendations">
-            <h3>💡 Recommandations</h3>
+            <h3><span className="card-header-icon lightbulb-icon"></span>Recommandations</h3>
             <div className="recommendations-list">
               <div className="recommendation">
-                <span className="rec-icon">⚡</span>
+                <span className="rec-icon speed-icon"></span>
                 <span className="rec-text">
                   Utilisez la valeur recommandée pour gérer les pics d'utilisation
                 </span>
               </div>
               <div className="recommendation">
-                <span className="rec-icon">🔄</span>
+                <span className="rec-icon refresh-icon"></span>
                 <span className="rec-text">
                   L'overhead réseau inclut les protocoles TCP/IP, Ethernet, etc.
                 </span>
               </div>
               <div className="recommendation">
-                <span className="rec-icon">📈</span>
+                <span className="rec-icon trend-icon"></span>
                 <span className="rec-text">
                   Prévoyez une marge pour la croissance future du trafic
                 </span>
               </div>
               <div className="recommendation">
-                <span className="rec-icon">🎯</span>
+                <span className="rec-icon target-icon"></span>
                 <span className="rec-text">
                   Considérez la QoS pour prioriser le trafic critique
                 </span>

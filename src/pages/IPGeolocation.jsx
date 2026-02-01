@@ -104,7 +104,7 @@ function IPGeolocation() {
           
           <div className="result-grid">
             <div className="result-card">
-              <h3>📍 Localisation</h3>
+              <h3><span className="card-header-icon location-icon"></span>Localisation</h3>
               <div className="result-item">
                 <span className="label">Pays:</span>
                 <span className="value">{result.country} ({result.countryCode})</span>
@@ -124,7 +124,7 @@ function IPGeolocation() {
             </div>
 
             <div className="result-card">
-              <h3>🌐 Coordonnées</h3>
+              <h3><span className="card-header-icon coordinates-icon"></span>Coordonnées</h3>
               <div className="result-item">
                 <span className="label">Latitude:</span>
                 <span className="value">{result.lat}</span>
@@ -140,7 +140,7 @@ function IPGeolocation() {
             </div>
 
             <div className="result-card">
-              <h3>🏢 Fournisseur</h3>
+              <h3><span className="card-header-icon provider-icon"></span>Fournisseur</h3>
               <div className="result-item">
                 <span className="label">ISP:</span>
                 <span className="value">{result.isp}</span>
@@ -167,7 +167,8 @@ function IPGeolocation() {
               rel="noopener noreferrer"
               className="map-button"
             >
-              🗺️ Voir sur Google Maps
+              <span className="button-icon map-icon"></span>
+              Voir sur Google Maps
             </a>
           </div>
         </div>

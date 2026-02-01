@@ -269,7 +269,7 @@ function IPRangeCalculator() {
           
           <div className="result-grid">
             <div className="result-card">
-              <h3>🌐 Informations du réseau</h3>
+              <h3><span className="card-header-icon network-icon"></span>Informations du réseau</h3>
               <div className="result-item">
                 <span className="label">Notation CIDR:</span>
                 <span className="value highlight">{result.cidr}</span>
@@ -297,7 +297,7 @@ function IPRangeCalculator() {
             </div>
 
             <div className="result-card">
-              <h3>🏠 Plage d'hôtes</h3>
+              <h3><span className="card-header-icon host-icon"></span>Plage d'hôtes</h3>
               <div className="result-item">
                 <span className="label">Première adresse hôte:</span>
                 <span className="value">{result.firstHost}</span>
@@ -319,7 +319,7 @@ function IPRangeCalculator() {
 
           {result.originalRange && (
             <div className="original-range">
-              <h3>📊 Plage originale</h3>
+              <h3><span className="card-header-icon chart-icon"></span>Plage originale</h3>
               <div className="range-info">
                 <div className="result-item">
                   <span className="label">Plage demandée:</span>
@@ -337,7 +337,7 @@ function IPRangeCalculator() {
           )}
 
           <div className="conversion-formats">
-            <h3>🔄 Formats de conversion</h3>
+            <h3><span className="card-header-icon convert-icon"></span>Formats de conversion</h3>
             <div className="format-list">
               <div className="format-item">
                 <span className="format-label">CIDR:</span>

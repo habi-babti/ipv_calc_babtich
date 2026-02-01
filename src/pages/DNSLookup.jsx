@@ -153,7 +153,10 @@ function DNSLookup() {
           <div className="dns-info">
             <div className="result-item">
               <span className="label">Statut:</span>
-              <span className="value success">✅ Résolu</span>
+              <span className="value success">
+                <span className="status-icon success-icon"></span>
+                Résolu
+              </span>
             </div>
             <div className="result-item">
               <span className="label">Serveur DNS:</span>

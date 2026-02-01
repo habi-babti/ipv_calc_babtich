@@ -182,11 +182,11 @@ function NetworkOverlapDetector() {
 
   const getRelationshipIcon = (relationship) => {
     switch (relationship) {
-      case 'identical': return '🔄';
-      case 'contains': return '🔵';
-      case 'contained': return '🔴';
-      case 'partial': return '⚠️';
-      default: return '❓';
+      case 'identical': return 'identical-icon';
+      case 'contains': return 'contains-icon';
+      case 'contained': return 'contained-icon';
+      case 'partial': return 'partial-icon';
+      default: return 'unknown-icon';
     }
   };
 
@@ -247,7 +247,11 @@ function NetworkOverlapDetector() {
         <div className="results-section">
           <div className="analysis-summary">
             <h2>
-              {results.hasOverlaps ? '⚠️ Chevauchements détectés' : '✅ Aucun chevauchement'}
+              {results.hasOverlaps ? (
+                <><span className="status-icon warning-icon"></span>Chevauchements détectés</>
+              ) : (
+                <><span className="status-icon success-icon"></span>Aucun chevauchement</>
+              )}
             </h2>
             <div className="summary-stats">
               <div className="stat-item">
@@ -271,11 +275,11 @@ function NetworkOverlapDetector() {
 
           {results.overlaps.length > 0 && (
             <div className="overlaps-section">
-              <h3>🚨 Chevauchements détectés</h3>
+              <h3><span className="card-header-icon alert-icon"></span>Chevauchements détectés</h3>
               {results.overlaps.map((overlap, index) => (
                 <div key={index} className="overlap-card">
                   <div className="overlap-header">
-                    <span className="overlap-icon">{getRelationshipIcon(overlap.relationship)}</span>
+                    <span className={`overlap-icon ${getRelationshipIcon(overlap.relationship)}`}></span>
                     <span className="overlap-title">{getRelationshipText(overlap.relationship)}</span>
                   </div>
                   
@@ -316,7 +320,7 @@ function NetworkOverlapDetector() {
           )}
 
           <div className="networks-table">
-            <h3>📋 Réseaux analysés</h3>
+            <h3><span className="card-header-icon table-icon"></span>Réseaux analysés</h3>
             <div className="table-header">
               <span>CIDR</span>
               <span>Adresse réseau</span>
@@ -335,7 +339,8 @@ function NetworkOverlapDetector() {
                   <span className="network-broadcast">{network.broadcastIP}</span>
                   <span className="network-size">{network.size.toLocaleString()}</span>
                   <span className={`network-status ${hasOverlap ? 'overlap' : 'clean'}`}>
-                    {hasOverlap ? '⚠️ Conflit' : '✅ OK'}
+                    <span className={`status-icon ${hasOverlap ? 'warning-icon' : 'success-icon'}`}></span>
+                    {hasOverlap ? 'Conflit' : 'OK'}
                   </span>
                 </div>
               );
@@ -344,7 +349,7 @@ function NetworkOverlapDetector() {
 
           {results.gaps.length > 0 && (
             <div className="gaps-section">
-              <h3>📊 Espaces libres entre réseaux</h3>
+              <h3><span className="card-header-icon chart-icon"></span>Espaces libres entre réseaux</h3>
               <div className="gaps-list">
                 {results.gaps.map((gap, index) => (
                   <div key={index} className="gap-item">
@@ -358,7 +363,7 @@ function NetworkOverlapDetector() {
 
           {!results.hasOverlaps && (
             <div className="success-message">
-              <h3>✅ Excellente nouvelle !</h3>
+              <h3><span className="status-icon success-icon"></span>Excellente nouvelle !</h3>
               <p>Aucun chevauchement détecté entre vos réseaux. Votre plan d'adressage est correct.</p>
             </div>
           )}

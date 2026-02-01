@@ -201,7 +201,7 @@ function SupernettingCalculator() {
           
           <div className="result-grid">
             <div className="result-card">
-              <h3>🌐 Supernet Calculé</h3>
+              <h3><span className="card-header-icon network-icon"></span>Supernet Calculé</h3>
               <div className="result-item">
                 <span className="label">Réseau supernet:</span>
                 <span className="value highlight">{result.supernet.cidr}</span>
@@ -229,7 +229,7 @@ function SupernettingCalculator() {
             </div>
 
             <div className="result-card">
-              <h3>📊 Statistiques</h3>
+              <h3><span className="card-header-icon stats-icon"></span>Statistiques</h3>
               <div className="result-item">
                 <span className="label">Taille du supernet:</span>
                 <span className="value">{result.supernet.size.toLocaleString()} adresses</span>
@@ -252,7 +252,7 @@ function SupernettingCalculator() {
           </div>
 
           <div className="original-networks">
-            <h3>📋 Réseaux originaux</h3>
+            <h3><span className="card-header-icon list-icon"></span>Réseaux originaux</h3>
             <div className="networks-table">
               <div className="table-header">
                 <span>Réseau</span>
@@ -275,7 +275,7 @@ function SupernettingCalculator() {
 
           {result.gaps.length > 0 && (
             <div className="gaps-section">
-              <h3>⚠️ Espaces non utilisés</h3>
+              <h3><span className="card-header-icon warning-icon"></span>Espaces non utilisés</h3>
               <div className="gaps-list">
                 {result.gaps.map((gap, index) => (
                   <div key={index} className="gap-item">

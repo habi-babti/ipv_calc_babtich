@@ -157,7 +157,10 @@ function SubnettingQuiz() {
                   onChange={(e) => setDifficulty(e.target.value)}
                 />
                 <div className="option-content">
-                  <span className="option-title">🟢 Facile</span>
+                  <span className="option-title">
+                    <span className="difficulty-indicator easy"></span>
+                    Facile
+                  </span>
                   <span className="option-desc">Préfixes /24 à /28</span>
                 </div>
               </label>
@@ -170,7 +173,10 @@ function SubnettingQuiz() {
                   onChange={(e) => setDifficulty(e.target.value)}
                 />
                 <div className="option-content">
-                  <span className="option-title">🟡 Moyen</span>
+                  <span className="option-title">
+                    <span className="difficulty-indicator medium"></span>
+                    Moyen
+                  </span>
                   <span className="option-desc">Préfixes /20 à /29</span>
                 </div>
               </label>
@@ -183,7 +189,10 @@ function SubnettingQuiz() {
                   onChange={(e) => setDifficulty(e.target.value)}
                 />
                 <div className="option-content">
-                  <span className="option-title">🔴 Difficile</span>
+                  <span className="option-title">
+                    <span className="difficulty-indicator hard"></span>
+                    Difficile
+                  </span>
                   <span className="option-desc">Préfixes /16 à /30</span>
                 </div>
               </label>
@@ -191,7 +200,7 @@ function SubnettingQuiz() {
           </div>
 
           <div className="quiz-info">
-            <h3>📋 Format du quiz</h3>
+            <h3><span className="card-header-icon info-icon"></span>Format du quiz</h3>
             <ul>
               <li>10 questions aléatoires</li>
               <li>Questions sur les adresses réseau, broadcast, masques, etc.</li>
@@ -201,7 +210,8 @@ function SubnettingQuiz() {
           </div>
 
           <button onClick={startQuiz} className="calculate-button">
-            🚀 Commencer le Quiz
+            <span className="button-icon start-icon"></span>
+            Commencer le Quiz
           </button>
         </div>
       </div>
@@ -214,7 +224,7 @@ function SubnettingQuiz() {
     return (
       <div className="calculator">
         <div className="quiz-complete">
-          <h1>🎉 Quiz Terminé !</h1>
+          <h1><span className="celebration-icon"></span>Quiz Terminé !</h1>
           
           <div className="final-score">
             <div className={`score-display ${getScoreColor(percentage)}`}>
@@ -225,7 +235,7 @@ function SubnettingQuiz() {
           </div>
 
           <div className="quiz-summary">
-            <h3>📊 Résumé des réponses</h3>
+            <h3><span className="card-header-icon summary-icon"></span>Résumé des réponses</h3>
             <div className="questions-review">
               {questions.map((q, index) => (
                 <div key={index} className="question-review">
@@ -244,10 +254,12 @@ function SubnettingQuiz() {
 
           <div className="quiz-actions">
             <button onClick={startQuiz} className="calculate-button">
-              🔄 Refaire le Quiz
+              <span className="button-icon refresh-icon"></span>
+              Refaire le Quiz
             </button>
             <button onClick={resetQuiz} className="secondary-button">
-              ⚙️ Changer de Niveau
+              <span className="button-icon settings-icon"></span>
+              Changer de Niveau
             </button>
           </div>
         </div>
@@ -302,9 +314,7 @@ function SubnettingQuiz() {
         ) : (
           <div className="answer-result">
             <div className={`result-display ${isCorrect ? 'correct' : 'incorrect'}`}>
-              <div className="result-icon">
-                {isCorrect ? '✅' : '❌'}
-              </div>
+              <div className={`result-icon ${isCorrect ? 'success-icon' : 'error-icon'}`}></div>
               <div className="result-text">
                 {isCorrect ? 'Correct !' : 'Incorrect'}
               </div>
@@ -322,7 +332,7 @@ function SubnettingQuiz() {
             </div>
 
             <div className="detailed-answers">
-              <h4>📋 Détails complets pour {question.network}:</h4>
+              <h4><span className="card-header-icon details-icon"></span>Détails complets pour {question.network}:</h4>
               <div className="answers-grid">
                 <div className="answer-item">
                   <span>Adresse réseau:</span>
