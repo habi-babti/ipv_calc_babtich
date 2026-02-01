@@ -133,3 +133,1060 @@
   font-size: 0.9rem;
   margin: 0;
 }
+/* New styles for network tools */
+.calculator {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.calculate-button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.calculate-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+}
+
+.calculate-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.secondary-button {
+  padding: 0.5rem 1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  color: #475569;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.secondary-button:hover {
+  background: #e2e8f0;
+}
+
+.input-group select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #1a1a2e;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.input-group select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* IP Geolocation specific styles */
+.ip-input-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ip-input-container input {
+  flex: 1;
+}
+
+.results-section {
+  margin-top: 2rem;
+}
+
+.results-section h2 {
+  color: #1a1a2e;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.result-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.result-card h3 {
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-item .label {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.result-item .value {
+  color: #1a1a2e;
+  font-weight: 500;
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.result-item .value.highlight {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.result-item .value.success {
+  color: #059669;
+}
+
+.result-item .value.warning {
+  color: #d97706;
+}
+
+.result-item .value.error {
+  color: #dc2626;
+}
+
+.map-link {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.map-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #059669;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.map-button:hover {
+  background: #047857;
+  transform: translateY(-2px);
+}
+
+/* DNS Lookup specific styles */
+.dns-info {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.dns-records h3 {
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+}
+
+.records-table, .table-header, .table-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 2fr 80px;
+  gap: 1rem;
+  align-items: center;
+}
+
+.table-header {
+  background: #f1f5f9;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.table-row {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.9rem;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.record-type {
+  background: #2563eb;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.dns-authority {
+  margin-top: 1.5rem;
+}
+
+.authority-list {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.authority-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.9rem;
+}
+
+.authority-item:last-child {
+  border-bottom: none;
+}
+
+/* Binary Converter specific styles */
+.conversion-table {
+  margin-bottom: 2rem;
+}
+
+.conversion-table .table-header,
+.conversion-table .table-row {
+  grid-template-columns: 80px 100px 150px 120px;
+}
+
+.binary-value {
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.hex-value {
+  font-family: 'Consolas', 'Monaco', monospace;
+  color: #059669;
+}
+
+.full-conversions {
+  margin-top: 2rem;
+}
+
+.conversion-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.conversion-item:last-child {
+  border-bottom: none;
+}
+
+.conversion-label {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.conversion-value {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.conversion-value code {
+  background: #f1f5f9;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  color: #1a1a2e;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.copy-btn:hover {
+  background: #e2e8f0;
+}
+
+.binary-breakdown {
+  margin-top: 2rem;
+}
+
+.binary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.binary-octet {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.octet-header {
+  text-align: center;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+}
+
+.binary-bits {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.bit {
+  text-align: center;
+  border-radius: 4px;
+  padding: 0.25rem;
+}
+
+.bit-on {
+  background: #2563eb;
+  color: white;
+}
+
+.bit-off {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.bit-value {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.bit-weight {
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+.octet-calculation {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #64748b;
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+
+/* Network input rows */
+.networks-input {
+  margin-bottom: 1.5rem;
+}
+
+.network-input-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.network-input-row input {
+  flex: 1;
+}
+
+.add-button, .remove-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.add-button {
+  background: #059669;
+  color: white;
+  margin-top: 0.5rem;
+}
+
+.add-button:hover {
+  background: #047857;
+}
+
+.remove-button {
+  background: #dc2626;
+  color: white;
+  padding: 0.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-button:hover {
+  background: #b91c1c;
+}
+
+/* Supernetting specific styles */
+.networks-table .table-header,
+.networks-table .table-row {
+  grid-template-columns: 150px 150px 100px 200px;
+}
+
+.gaps-section {
+  margin-top: 2rem;
+  background: #fef3c7;
+  border: 1px solid #fbbf24;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.gaps-list {
+  margin: 1rem 0;
+}
+
+.gap-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #fbbf24;
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.gap-item:last-child {
+  border-bottom: none;
+}
+
+.gap-note {
+  color: #92400e;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* Overlap detector specific styles */
+.analysis-summary {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stat-item {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+.overlaps-section {
+  margin-bottom: 2rem;
+}
+
+.overlap-card {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.overlap-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.overlap-icon {
+  font-size: 1.2rem;
+}
+
+.overlap-title {
+  font-weight: 600;
+  color: #dc2626;
+}
+
+.overlap-networks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.network-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.network-label {
+  color: #64748b;
+}
+
+.network-value {
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-weight: 600;
+}
+
+.overlap-range {
+  background: white;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.network-status.overlap {
+  color: #dc2626;
+}
+
+.network-status.clean {
+  color: #059669;
+}
+
+.success-message {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  color: #166534;
+}
+
+/* Quiz specific styles */
+.quiz-setup {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.difficulty-selection {
+  margin-bottom: 2rem;
+}
+
+.difficulty-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.difficulty-option {
+  cursor: pointer;
+}
+
+.difficulty-option input {
+  display: none;
+}
+
+.option-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.difficulty-option.selected .option-content {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.option-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.option-desc {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.quiz-info {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.quiz-info ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.quiz-info li {
+  margin-bottom: 0.5rem;
+  color: #475569;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.quiz-progress {
+  flex: 1;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2563eb;
+  transition: width 0.3s;
+}
+
+.quiz-score {
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.question-section {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.network-display {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #eff6ff;
+  border-radius: 8px;
+}
+
+.network-display h2 {
+  color: #2563eb;
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.question-text {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.answer-input {
+  display: flex;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.answer-input input {
+  flex: 1;
+  text-align: center;
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.answer-result {
+  text-align: center;
+}
+
+.result-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.result-display.correct {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+}
+
+.result-display.incorrect {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+}
+
+.result-icon {
+  font-size: 2rem;
+}
+
+.result-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.answer-explanation {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.correct-answer, .user-answer {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.correct-answer {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.user-answer {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.detailed-answers {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.answers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.answer-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.quiz-complete {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.final-score {
+  margin: 2rem 0;
+}
+
+.score-display {
+  display: inline-block;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.score-display.success {
+  background: #f0fdf4;
+  border: 2px solid #bbf7d0;
+  color: #166534;
+}
+
+.score-display.warning {
+  background: #fefce8;
+  border: 2px solid #fde047;
+  color: #ca8a04;
+}
+
+.score-display.error {
+  background: #fef2f2;
+  border: 2px solid #fecaca;
+  color: #dc2626;
+}
+
+.score-number {
+  display: block;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.score-percentage {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.score-message {
+  font-size: 1.1rem;
+  color: #475569;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.quiz-summary {
+  margin: 3rem 0;
+  text-align: left;
+}
+
+.questions-review {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.question-review {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 1rem;
+}
+
+.question-review:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.question-header {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.question-number {
+  background: #2563eb;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.question-network {
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.question-text {
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+.correct-answer {
+  font-family: 'Consolas', 'Monaco', monospace;
+  color: #166534;
+}
+
+.quiz-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Bandwidth Calculator specific styles */
+.services-section {
+  margin-bottom: 1.5rem;
+}
+
+.services-header {
+  margin-bottom: 1rem;
+}
+
+.service-templates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  align-items: center;
+}
+
+.service-templates span {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.template-button {
+  padding: 0.25rem 0.5rem;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 4px;
+  color: #2563eb;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.template-button:hover {
+  background: #dbeafe;
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: 2fr 100px 120px 80px auto;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.file-section {
+  margin-bottom: 1.5rem;
+}
+
+.input-with-unit {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input-with-unit input {
+  flex: 1;
+}
+
+.input-with-unit select {
+  width: 100px;
+}
+
+.services-breakdown {
+  margin-top: 2rem;
+}
+
+.services-table .table-header,
+.services-table .table-row {
+  grid-template-columns: 2fr 100px 120px 120px;
+}
+
+.bandwidth-recommendations {
+  margin-top: 2rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.recommendations-list {
+  margin-top: 1rem;
+}
+
+.recommendation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.recommendation:last-child {
+  border-bottom: none;
+}
+
+.rec-icon {
+  font-size: 1.2rem;
+}
+
+.rec-text {
+  color: #475569;
+}
+
+/* IP Range Calculator specific styles */
+.conversion-formats {
+  margin-top: 2rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.format-list {
+  margin-top: 1rem;
+}
+
+.format-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.format-item:last-child {
+  border-bottom: none;
+}
+
+.format-label {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.format-item code {
+  background: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  border: 1px solid #e2e8f0;
+}
+
+.original-range {
+  margin-top: 2rem;
+  background: #eff6ff;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.range-info {
+  margin-top: 1rem;
+}
+
+.range-note {
+  color: #2563eb;
+  font-style: italic;
+  margin-top: 1rem;
+}
