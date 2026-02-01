@@ -1,0 +1,91 @@
+.theme-toggle {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.toggle-track {
+  width: 50px;
+  height: 26px;
+  background: var(--toggle-track-bg, #e2e8f0);
+  border-radius: 13px;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 2px solid var(--toggle-border, #cbd5e1);
+}
+
+.toggle-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--toggle-thumb-bg, #ffffff);
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-icon {
+  width: 12px;
+  height: 12px;
+  background: var(--toggle-icon-color, #64748b);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  transition: all 0.3s ease;
+}
+
+.sun-icon {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'/%3E%3C/svg%3E");
+}
+
+.moon-icon {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z'/%3E%3C/svg%3E");
+}
+
+/* Dark theme styles */
+[data-theme="dark"] .toggle-track {
+  --toggle-track-bg: #374151;
+  --toggle-border: #4b5563;
+}
+
+[data-theme="dark"] .toggle-thumb {
+  --toggle-thumb-bg: #1f2937;
+  transform: translateX(22px);
+}
+
+[data-theme="dark"] .toggle-icon {
+  --toggle-icon-color: #fbbf24;
+}
+
+/* Light theme styles */
+[data-theme="light"] .toggle-track {
+  --toggle-track-bg: #e2e8f0;
+  --toggle-border: #cbd5e1;
+}
+
+[data-theme="light"] .toggle-thumb {
+  --toggle-thumb-bg: #ffffff;
+  transform: translateX(0);
+}
+
+[data-theme="light"] .toggle-icon {
+  --toggle-icon-color: #f59e0b;
+}
+
+.theme-toggle:hover .toggle-track {
+  --toggle-border: #2563eb;
+}
+
+.theme-toggle:focus {
+  outline: 2px solid var(--focus-color, #2563eb);
+  outline-offset: 2px;
+}

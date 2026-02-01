@@ -1,13 +1,72 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ipv4-calculator</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Meta tags for PWA -->
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="background-color" content="#ffffff" />
+    <meta name="display" content="standalone" />
+    <meta name="orientation" content="portrait-primary" />
+    
+    <!-- SEO Meta tags -->
+    <meta name="description" content="Calculateur de sous-réseaux IPv4 et IPv6 avec explications étape par étape en français" />
+    <meta name="keywords" content="IPv4, IPv6, sous-réseau, CIDR, calculateur réseau, networking, subnetting" />
+    <meta name="author" content="Babtich El Habib" />
+    
+    <!-- Open Graph Meta tags -->
+    <meta property="og:title" content="Calculateur IP - IPv4 & IPv6" />
+    <meta property="og:description" content="Calculateur de sous-réseaux IPv4 et IPv6 avec explications étape par étape" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-domain.com" />
+    <meta property="og:image" content="/icons/icon-512x512.png" />
+    
+    <!-- Twitter Card Meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Calculateur IP - IPv4 & IPv6" />
+    <meta name="twitter:description" content="Calculateur de sous-réseaux IPv4 et IPv6 avec explications étape par étape" />
+    <meta name="twitter:image" content="/icons/icon-512x512.png" />
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/icon-128x128.png" />
+    
+    <!-- Apple Web App Meta tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="IP Calculator" />
+    
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileColor" content="#2563eb" />
+    <meta name="msapplication-TileImage" content="/icons/icon-144x144.png" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    
+    <title>Calculateur IP - IPv4 & IPv6</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

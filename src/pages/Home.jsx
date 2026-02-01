@@ -56,6 +56,13 @@ function Home() {
             <p>Rechercher les enregistrements DNS (A, AAAA, MX, NS, etc.)</p>
             <span className="card-link">Rechercher</span>
           </Link>
+
+          <Link to="/network-status" className="card">
+            <div className="card-icon status-icon"></div>
+            <h3>État du Réseau</h3>
+            <p>Vérifier la connectivité et tester la vitesse de connexion</p>
+            <span className="card-link">Tester</span>
+          </Link>
         </div>
 
         <h2 className="section-title">Calculateurs Avancés</h2>
